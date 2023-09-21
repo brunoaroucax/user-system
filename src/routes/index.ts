@@ -12,7 +12,12 @@ router.get('/login', (request, response) => {
 router.get('/criar-usuario', (request, response) => {
   return response.render('pages/criar-usuario')
 });
-router.post('/criar-usuario', UserController.create)
+router.get('/painel', (request, response) => {
+  return response.render('pages/painel')
+})
+
+router.post('/criar-usuario', UserController.create);
+router.post('/fazer-login', UserController.login);
 
 
 

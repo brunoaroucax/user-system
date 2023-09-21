@@ -9,7 +9,7 @@
         <div class="box p-4 mt-5">
           <h4 class="mb-5">Criar conta</h4>
 
-          <form action="/criar-usuario" method="POST">
+          <form action="/criar-usuario" method="POST" onsubmit=" return validatorPassword()">
 
             <div class="mb-3">
               <label for="usernameInput" class="form-label">Username</label>
@@ -37,7 +37,7 @@
 
           </form>
           <div class="mt-5">
-            <p>Ja possui uma conta? <a href="#">Fazer login</a></p>
+            <p>Ja possui uma conta? <a href="/login">Fazer login</a></p>
             </dv>
           </div>
         </div>
@@ -46,5 +46,5 @@
 
 
   </main>
-
+  <script src="/js/validator-form.js"></script>
   <%- include('../partials/footer') %>
