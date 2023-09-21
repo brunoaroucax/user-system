@@ -9,6 +9,12 @@ const port = process.env.PORT;
 
 const server = express();
 
+// Middleware para lidar com solicitações JSON
+server.use(express.json());
+
+// Middleware para lidar com dados de formulário
+server.use(express.urlencoded({ extended: true }));
+
 server.set('view engine', 'ejs');
 server.set('views', path.join(__dirname, 'views'));
 

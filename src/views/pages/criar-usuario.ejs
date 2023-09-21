@@ -1,0 +1,50 @@
+<%- include('../partials/head', {pageTitle: 'Cadastrar usuário' }) %>
+
+  <main>
+    <div class="container">
+      <div class="row d-flex flex-column justify-content-center align-items-center">
+
+        <h2 class="text-center mt-5">Sistema de Usuários</h2>
+
+        <div class="box p-4 mt-5">
+          <h4 class="mb-5">Criar conta</h4>
+
+          <form action="/criar-usuario" method="POST">
+
+            <div class="mb-3">
+              <label for="usernameInput" class="form-label">Username</label>
+              <input type="text" name="username" class="form-control" id="usernameInput" aria-describedby="usernamelHelp">
+            </div>
+
+            <div class="mb-3">
+              <label for="emailInput" class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+              <label for="passwordInput" class="form-label">Senha</label>
+              <input type="password" name="password" class="form-control" id="passwordInput" aria-describedby="passwordHelp">
+            </div>
+
+            <div class="mb-5">
+              <label for="confirmPasswordInput" class="form-label">Confirme a senha:</label>
+              <input type="password" name="confirmPassword" class="form-control" id="confirmPasswordInput" aria-describedby="confirmPasswordHelp">
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Criar conta</button>
+            </div>
+
+          </form>
+          <div class="mt-5">
+            <p>Ja possui uma conta? <a href="#">Fazer login</a></p>
+            </dv>
+          </div>
+        </div>
+      </div>
+
+
+
+  </main>
+
+  <%- include('../partials/footer') %>

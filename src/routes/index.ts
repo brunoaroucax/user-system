@@ -1,10 +1,18 @@
-import { Router } from "express";
+import { Router } from 'express';
+import UserController from '../controller/UserController';
 
 const router = Router();
 
 router.get('/', (request, response) => {
-  return response.render('index')
-})
+  return response.render('index');
+});
+router.get('/login', (request, response) => {
+  return response.render('pages/login');
+});
+router.get('/criar-usuario', (request, response) => {
+  return response.render('pages/criar-usuario')
+});
+router.post('/criar-usuario', UserController.create)
 
 
 
