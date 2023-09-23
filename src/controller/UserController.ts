@@ -39,6 +39,16 @@ class UserController{
       return response.redirect('/painel')
     }
   }
+
+  async getusers(request: Request, response: Response){
+    const users = await User.findAll();
+    console.log(users)
+    if( users.status ){
+      return response.render('pages/usuarios', {users: users.data})
+    }
+
+    return response.render('pages/usuarios', {users: null, message: 'Nenhum usuario encontrado'})
+  }
 }
 
 export default new UserController();

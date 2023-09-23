@@ -2,10 +2,47 @@
 
 <%- include('../partials/header') %>
 
-<main>
-  <div class="container mt-5">
-    <h1>Painel</h1>
+<div class="container painel">
+
+  <div class="row">
+
+    <div class="col-2">
+      <%- include('../partials/nav-vertical') %>
+    </div>
+
+    <main class="col-10">
+      <div class="mt-5">
+        <h2 class="mb-5">Todos comentários</h2>
+
+        <div class="box-comments">
+          <div class="comments">
+            <p class="message">Hello World</p>
+            <p class="sub">- admin, em 22-09-2023 18:23:52</p>
+          </div>
+          <div class="comments">
+            <p class="message">Hello World</p>
+            <p class="sub">- admin, em 22-09-2023 18:23:52</p>
+          </div>
+        </div>
+
+        <div class="post-comments">
+          <h5 class="mb-3">Fazer comentario</h5>
+          <form action="">
+
+            <div class="mb-3">
+              <textarea class="form-control inputComment" id="inputComment" rows="3"></textarea>
+            </div>
+
+            <button class="btn btn-primary">
+              <i class="bi bi-chat-fill"></i>
+              Comentar
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </main>
   </div>
-</main>
+</div>
 
 <%- include('../partials/footer') %>

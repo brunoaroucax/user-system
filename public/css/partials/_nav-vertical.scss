@@ -1,0 +1,20 @@
+.nav-vertical{
+  min-width: 250px;
+  height: 100%;
+
+  li{
+    padding: 6px 0;
+    a{
+      padding-left: 0;
+      color: #323232;
+      i{
+        margin-right: 12px;
+      }
+
+      &.active{
+        font-weight: 700;
+        color: #0d6efd;
+      }
+    }
+  }
+}

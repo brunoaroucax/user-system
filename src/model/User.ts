@@ -85,6 +85,22 @@ class User{
     }
   }
 
+  async findAll() {
+    try {
+      const result = await db.select('id', 'username', 'email', 'firstname', 'address', 'phone')
+                        .table('users');
+      console.log('MODEL: '+result)
+
+      if(result.length > 0){
+        return {status: true, data: result}
+      } else {
+        return {status: false, message: 'Nenhum usuário encontrado'}
+      }
+
+    } catch (error) {
+      return {status: false, message: error}
+    }
+  }
 }
 
 export default new User();

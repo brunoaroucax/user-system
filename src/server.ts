@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 
 import mainRoutes from './routes';
+import painelRoutes from './routes/painelRoutes';
 
 dotenv.config();
 const port = process.env.PORT;
@@ -19,7 +20,9 @@ server.set('view engine', 'ejs');
 server.set('views', path.join(__dirname, 'views'));
 
 server.use(express.static(path.join(__dirname, '../public')));
+// server.use(express.static('../../public'));
 
+server.use('/painel', painelRoutes);
 server.use(mainRoutes);
 
 // Rotas

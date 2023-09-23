@@ -1,0 +1,49 @@
+<ul class="nav flex-column mt-5 nav-vertical">
+  <li class="nav-item ">
+    <a class="nav-link" aria-current="page" href="/painel">
+      <i class="bi bi-house-door-fill"></i>
+      Home
+    </a>
+  </li>
+  <li class="nav-item d-flex align-items-center">
+    
+    <a class="nav-link" href="/painel/meu-perfil">
+      <i class="bi bi-person-fill"></i>
+      Meu Perfil
+    </a>
+  </li>
+  <li class="nav-item d-flex align-items-center">
+    <a class="nav-link" href="/painel/usuarios">
+      <i class="bi bi-people-fill"></i>
+      Usuários
+    </a>
+  </li>
+  <li class="nav-item d-flex align-items-center">
+    <a class="nav-link" href="/painel/minhas-permissoes">
+    <i class="bi bi-person-vcard-fill"></i>
+      Minhas permissões
+    </a>
+  </li>
+</ul>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      // Obtém a URL atual
+      var currentURL = window.location.pathname;
+  
+      // Obtém todas as tags <a> dentro da lista
+      var links = document.querySelectorAll(".nav-link");
+  
+      // Itera sobre os links
+      for (var i = 0; i < links.length; i++) {
+          var link = links[i];
+  
+          // Verifica se o atributo "href" do link corresponde à URL atual
+          if (link.getAttribute("href") === currentURL) {
+              // Adiciona a classe "active" ao link correspondente
+              link.classList.add("active");
+          }
+      }
+  });
+  </script>
+  
